@@ -9,7 +9,7 @@
 #import "mainViewController.h"
 
 @interface mainViewController ()
-
+@property(nonatomic) UIButton *button;
 @end
 
 @implementation mainViewController
@@ -18,6 +18,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor=[UIColor orangeColor];
+    [self addButtons];
+}
+-(void)addButtons{
+    _button=[[UIButton alloc]initWithFrame:CGRectMake(50, 50, 100, 150)];
+    [_button setTitle:@"Click Button" forState:UIControlStateNormal];
+    _button.backgroundColor=[UIColor blueColor];
+    [_button addTarget:self action:@selector(clickMe) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_button];
+}
+-(void)clickMe{
+    
+}
+-(void)requestData{
+    
 }
 
 - (void)didReceiveMemoryWarning {
