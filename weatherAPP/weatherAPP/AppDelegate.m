@@ -26,6 +26,7 @@
     navViewController *nav=[[navViewController alloc]initWithRootViewController:mainView];
     self.window.rootViewController=nav;
     [TSMessage setDefaultViewController:self.window.rootViewController];
+    
     return YES;
 }
 -(UIStatusBarStyle)preferredStatusBarStyle{
